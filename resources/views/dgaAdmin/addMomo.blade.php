@@ -18,12 +18,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="mb-4">
-                        <button onclick="loginAllMomo()" class="btn btn-secondary w-100">Login ALL MOMO</button>
+                        <button onclick="loginAllMomo()" class="btn btn-secondary w-100">Kiểm tra đăng nhập.</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="mb-4">
-                        <button onclick="checkStatusTransfer()" class="btn btn-secondary w-100">Check ALL History
+                        <button onclick="checkStatusTransfer()" class="btn btn-secondary w-100">Kiểm tra tất cả lịch sử.
                         </button>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     @endif
-                    <div class="block block-rounded">
+                    <div class="block block-rounded block-mode-hidden">
                         <div class="block-header block-header-default">
                             <h3 class="block-title">THÊM SỐ MOMO</h3>
                             <div class="block-options">
@@ -119,7 +119,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="block block-rounded block-mode-hidden">
+                    <div class="block block-rounded">
                         <div class="block-header block-header-default">
                             <h3 class="block-title">CHUYỂN TIỀN MOMO</h3>
                             <div class="block-options">
@@ -147,7 +147,7 @@
                                 <div class="row push">
                                     <div class="col-lg-12">
                                         <div class="mb-4">
-                                            <label class="form-label" for="example-select">Số MOMO chuyển</label>
+                                            <label class="form-label" for="example-select">Chọn MOMO để chuyển tiền.</label>
                                             <select class="form-select" id="phoneSend" name="phoneSend">
                                                 @foreach($GetAccountMomo as $row)
                                                     <option value="{{ $row->phone }}">{{ $row->phone }} / {!! $row->status_text !!}</option>
@@ -178,7 +178,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="mb-4">
-                                            <button type="submit" class="btn btn-secondary w-100">Chuyển Tiền</button>
+                                            <button type="submit" class="btn btn-secondary w-100">Chuyển tiền</button>
                                         </div>
                                     </div>
                                 </div>
