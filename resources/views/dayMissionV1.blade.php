@@ -11,7 +11,7 @@
     <div class="body">
         <div class="text-center">
             <font color="blue">
-                <big><b>Nhiệm Vụ Ngày</b></big>
+                <big><b>Mốc nhận thưởng</b></big>
             </font>
             <br/>
             <div class="form-group" id="non_query"
@@ -21,8 +21,8 @@
                                                                      placeholder="094xxxxxxx"/>
                 <small id="partnerId" class="form-text text-muted">Nhập số điện thoại của bạn để kiểm tra và nhận
                     thưởng.</small> <br/>
-                <button class="btn btn-success check-day-mission" onclick="check_dayMission()">Kiểm Tra</button>
-                <p>Tổng tiền Nhiệm Vụ Ngày đã trao: <b id="total_reward"
+                <button class="btn btn-success check-day-mission" onclick="check_dayMission()">Kiểm tra</button>
+                <p>Tổng tiền thưởng đã trao: <b id="total_reward"
                                                        style="color: blue;">{{ number_format($total) }}</b> <font
                         style="color: blue;">VNĐ</font></p>
             </div>
@@ -63,7 +63,7 @@
     function check_dayMission() {
         let phone = $("#partnerId").val();
         if (phone.length <= 9) {
-            alert('Số điện thoại không hợp lệ');
+            alert('Số điện thoại không hợp lệ hoặc bạn chưa đổi đầu số.');
             return false;
         }
         $("#non_query").hide();
@@ -76,7 +76,7 @@
             type: 'POST',
             success: function (d) {
                 if (d.status != true) {
-                    alert('Oh !! Số điện thoại này chưa chơi game nào, hãy kiểm tra lại');
+                    alert('Oh !! Số điện thoại này chưa chơi pem tay nào ở đây, hãy kiểm tra lại');
                     $("#non_query").show();
                     $("#day_mission_querying").hide();
                 } else {
@@ -89,11 +89,11 @@
                     html += `Số tiền đã chơi: <font color="red">` + number_format(d.TongTienChoiNgay) + `</font>`;
                     html += `<br>Phần thưởng hiện tại: `;
                     if (d.level <= 0) {
-                        html += `<br><font color="red">Ngày hôm nay bạn đã nhận hết phần thưởng đợi mai nha</font>`;
+                        html += `<br><font color="red">Ngày hôm nay bạn đã nhận hết phần thưởng cmnr đợi mai nha.</font>`;
                     } else {
                         if (parseInt(d.TongTienChoiNgay) >= parseInt(d.day)) {
                             html += ` <font color="red">` + number_format(d.receive) + `</font>. <br>`;
-                            html += `<button class="btn btn-success" onclick="NhanQuaNgay()">Nhận Ngay</button><br>`;
+                            html += `<button class="btn btn-success" onclick="NhanQuaNgay()">Nhận thưởng ngay</button><br>`;
                         } else {
                             html += ` <font color="blue">` + number_format(d.receive) + `</font>. <br>`;
                             html += ` <b> hãy chơi đủ thêm <font color="red"> ` + number_format(+d.day - +d.TongTienChoiNgay) + `</font> để nhận quà nhé. <b><br>`;
