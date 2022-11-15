@@ -13,10 +13,10 @@
     <meta name="title" content="Hệ thống chẳn lẻ MoMo uy tín giao dịch tự động 24/7" />
     <meta name="description" content="Chẳn lẻ momo - Uy tín , giao dịch tự động 24/7 - bank 30s !" />
     <meta name="keywords" content="Chẳn lẻ momo" />
-    <link rel="canonical" href="https://txmm88.com/">
+    <link rel="canonical" href="https://chanlemomo.best/">
     <meta name="robots" content="index, follow">
     <meta property="fb:app_id" content="" />
-    <meta property="og:url" content="https://txmm88.com/">
+    <meta property="og:url" content="https://chanlemomo.best/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Hệ thống chẳn lẻ MoMo uy tín giao dịch tự động 24/7">
     <meta property="og:description" content="Chẳn lẻ momo - Uy tín , giao dịch tự động 24/7 - bank 30s !">
