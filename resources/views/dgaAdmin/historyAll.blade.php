@@ -34,15 +34,15 @@
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th style="width: 5%;">MDG</th>
-                                    <th style="width: 10%;">Số MOMO</th>
-                                    <th>Người chuyển</th>
-                                    <th>Số tiền</th>
-                                    <th>Tiền nhận</th>
+                                    <th style="width: 10%;">Số MOMO:</th>
+                                    <th>Người chuyển:</th>
+                                    <th>Đặt cược:</th>
+                                    <th>Đã trúng:</th>
                                     <th>Nội dung</th>
-                                    <th>Trạng thái</th>
-                                    <th>Trả</th>
-                                    <th>Số chuyển</th>
-                                    <th style="width: 10%;">Ngày chơi</th>
+                                    <th>Loại bill:</th>
+                                    <th>Tình trạng:</th>
+                                    <th>Số chuyển:</th>
+                                    <th style="width: 10%;">Ngày:</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -75,11 +75,11 @@
                                             @endif
                                         </td>
                                         <td class="fw-semibold fs-sm">@if ($row->pay == 1) <span
-                                                class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-success-light text-success">Đã trả</span> @elseif($row->pay == 100)
+                                                class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-success-light text-success">Đã thanh toán</span> @elseif($row->pay == 100)
                                                 <span
                                                     class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-danger-light text-danger">Chuyển lỗi</span> @else
                                                 <span
-                                                    class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-danger-light text-danger">Chưa trả</span> @endif
+                                                    class="fs-xs fw-semibold d-inline-block py-1 px-3 rounded-pill bg-danger-light text-danger">Chưa thanh toán</span> @endif
                                         </td>
                                         <td class="fw-semibold fs-sm">{{ $row->phoneSend }}</td>
                                         <td>
@@ -161,7 +161,7 @@
                     <div class="block-content block-content-full text-end bg-body">
                         <button type="button" class="btn btn-sm btn-alt-secondary me-1" data-bs-dismiss="modal">Đóng
                         </button>
-                        <button type="button" class="btn btn-sm btn-primary" onclick="checkTran()">Kiểm Tra</button>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="checkTran()">Kiểm tra</button>
                     </div>
                 </div>
             </div>
