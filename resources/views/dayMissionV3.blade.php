@@ -11,7 +11,7 @@
     <div class="body">
         <div class="text-center">
             <font color="blue">
-                <big><b>Nhiệm Vụ Ngày</b></big>
+                <big><b>Nhiệm vụ ngày</b></big>
             </font>
             <br/>
             <div class="form-group" id="non_query"
